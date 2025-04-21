@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Keywords Meta Tag -->
+  <meta name="keywords" content="watches, smartwatches, Whatchify, luxury watches, affordable watches, stylish watches, chronograph, VortexPulse GT, AstraNova, men's watches, women's watches">
+
+  <title>Whatchify - Elegant & Modern Watches</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Product Catalog</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    .header {
+            background-color:#24263f ;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            height: 120px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            font-weight: 600;
+            color: #ffffff;
+          font-style: italic;
+          font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        .dropdown-filter {
+    margin: 20px 0;
+    text-align: center;
+  }
+  .nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: #4a6f8a;
+  padding: 14px 20px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  height: 40px;
+  width: 40px;
+  object-fit: contain;
+}
+
+.brand-name {
+  color: white;
+  font-weight: 700;
+  font-size: 1.2rem;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  color: white;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #d1e0ee;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding: 10px 0;
+  }
+}
+
+  .dropdown-filter select {
+    padding: 8px 14px;
+    font-size: 1rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    color: #333;
+  }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f8f9fa;
+      margin: 0;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin: 60px 0 30px;
+      color: #222;
+      font-size: 2rem;
+      text-transform: capitalize;
+    }
+    .hot-sellers-title {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222;
+  font-size: 2.6rem;
+  text-align: center;
+  margin: 60px 0 30px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-bottom: 3px solid #007bff;
+  display: inline-block;
+  padding-bottom: 10px;
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.1);
+}
+
+.hot-sellers-section {
+  background: linear-gradient(120deg, #e9f2ff, #f6fbff);
+  padding: 50px 30px;
+  border-radius: 16px;
+  margin-bottom: 80px;
+  box-shadow: 0 0 30px rgba(0, 123, 255, 0.05);
+  animation: fadeInHot 1s ease-in;
+}
+
+.hot-sellers-section .product-card {
+  box-shadow: 0 0 20px rgba(0, 123, 255, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hot-sellers-section .product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 22px rgba(0, 123, 255, 0.2);
+}
+
+/* Fade-in animation */
+@keyframes fadeInHot {
+  0% { opacity: 0; transform: scale(0.98); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+    .product-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .product-card {
+      background-color: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      transition: transform 0.2s ease, box-shadow 0.3s ease;
+      width: 250px;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    }
+
+    .product-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .product-details {
+      padding: 15px 20px;
+      text-align: center;
+    }
+
+    .product-title {
+      font-size: 18px;
+      font-weight: 600;
+      margin: 10px 0 5px;
+      color: #333;
+    }
+
+    .product-price {
+      font-size: 16px;
+      color: #28a745;
+      margin-bottom: 15px;
+    }
+
+
+    .footer {
+  width: 100%;
+  background-color: #24263f;
+  color: #fff;
+  padding: 60px 20px 30px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 40px;
+}
+
+
+    .footer-left,
+    .footer-center,
+    .footer-right {
+      flex: 1;
+      min-width: 250px;
+    }
+
+    .footer-logo img {
+      max-width: 150px;
+      margin-bottom: 15px;
+    }
+
+    .footer-description {
+      font-size: 1.1rem;
+      color: #ccc;
+    }
+
+    .footer-center h4,
+    .footer-right h4 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .footer-center ul,
+    .footer-right ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-center ul li,
+    .footer-right ul li {
+      margin: 8px 0;
+    }
+
+    .footer-center ul li a,
+    .footer-right ul li a {
+      color: #ccc;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .footer-center ul li a:hover,
+    .footer-right ul li a:hover {
+      color: #72a6c6;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 15px;
+      margin-top: 15px;
+    }
+
+    .social-icons a img {
+      width: 30px;
+      height: 30px;
+      transition: transform 0.3s ease;
+    }
+
+    .social-icons a:hover img {
+      transform: scale(1.1);
+    }
+
+    .footer-bottom {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 0.9rem;
+      color: #bbb;
+    }
+
+    .footer-links a {
+      color: #bbb;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    .footer-links a:hover {
+      color: #72a6c6;
+    }
+
+    @media (max-width: 768px) {
+      .nav {
+        flex-wrap: wrap;
+        gap: 15px;
+      }
+
+      .form-container,
+      .location-container {
+        padding: 20px;
+      }
+
+      .footer-container {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+    @media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-left, .footer-center, .footer-right {
+    width: 100%;
+  }
+}
+  </style>
+</head>
+<div class="nav">
+  <div class="nav-left">
+    <img src="watchify.jpg" alt="Whatchify Logo" class="logo" />
+    <span class="brand-name">Whatchify</span>
+  </div>
+  <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+  <div class="nav-links" id="nav-links">
+    <a href="home.html">Home</a>
+    <a href="hotseller.html">Our Products</a>
+    <a href="exlucive.html">Our Exclusive</a>
+    <a href="aboutus.html">About Us</a>
+    <a href="contact.html">Contact Us</a>
+  </div>
+</div>                                                            
+
+<!-- HOT SELLERS -->
+<h1>Hot Sellers</h1>
+<div class="product-container">
+  <div class="product-card">
+    <img src="wow.jpg" alt="AstraNova X1" class="product-image" />
+    <div class="product-details">
+      <h2 class="product-title">AstraNova X1</h2>
+      <p class="product-price">$19.99</p>
+      <button class="add-to-cart-btn">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <img src="yes.jpg" alt="LuxeCore Chrono" class="product-image" />
+    <div class="product-details">
+      <h2 class="product-title">LuxeCore Chrono</h2>
+      <p class="product-price">$24.99</p>
+      <button class="add-to-cart-btn">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <img src="oook.jpg" alt="VortexPulse GT" class="product-image" />
+    <div class="product-details">
+      <h2 class="product-title">VortexPulse GT</h2>
+      <p class="product-price">$14.50</p>
+      <button class="add-to-cart-btn">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <img src="ok.jpg" alt="EchoBuds Air" class="product-image" />
+    <div class="product-details">
+      <h2 class="product-title">Echo Air</h2>
+      <p class="product-price">$59.99</p>
+      <button class="add-to-cart-btn">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <img src="oke.jpg" alt="ThermoLux Pro" class="product-image" />
+    <div class="product-details">
+      <h2 class="product-title">ThermoLux Pro</h2>
+      <p class="product-price">$99.00</p>
+      <button class="add-to-cart-btn">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <img src="plk.gif" alt="HeatNova Edge" class="product-image" />
+    <div class="product-details">
+      <h2 class="product-title">HeatNova Edge</h2>
+      <p class="product-price">$79.00</p>
+      <button class="add-to-cart-btn">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <img src="gh.jpg" alt="GlowBeam Mini" class="product-image" />
+    <div class="product-details">
+      <h2 class="product-title">GlowBeam Mini</h2>
+      <p class="product-price">$34.99</p>
+      <button class="add-to-cart-btn">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <img src="llh.jpg" alt="LumoLite Desk" class="product-image" />
+    <div class="product-details">
+      <h2 class="product-title">LumoLite Desk</h2>
+      <p class="product-price">$39.99</p>
+      <button class="add-to-cart-btn">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <img src="mn.jpg" alt="TimeZen Clock" class="product-image" />
+    <div class="product-details">
+      <h2 class="product-title">TimeZen Clock</h2>
+      <p class="product-price">$22.00</p>
+      <button class="add-to-cart-btn">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+<!-- THIS SEASON NEW ARRIVALS -->
+<h1>This Season New Arrivals</h1>
+<div class="product-container">
+  <div class="product-card">
+    <img src="wow.jpg" alt="SkyDial Horizon" class="product-image" />
+    <div class="product-details">
+      <h2 class="product-title">SkyDial Horizon</h2>
+      <p class="product-price">$19.99</p>
+      <button class="add-to-cart-btn">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <img src="ww.jpg" alt="PulseCore Steel" class="product-image" />
+    <div class="product-details">
+      <h2 class="product-title">PulseCore Steel</h2>
+      <p class="product-price">$24.99</p>
+      <button class="add-to-cart-btn">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <img src="oook.jpg" alt="OrbitEdge Fit" class="product-image" />
+    <div class="product-details">
+      <h2 class="product-title">OrbitEdge Fit</h2>
+      <p class="product-price">$14.50</p>
+      <button class="add-to-cart-btn">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <img src="uu.jpg" alt="SonicBeats Lite" class="product-image" />
+    <div class="product-details">
+      <h2 class="product-title">SonicBeats Lite</h2>
+      <p class="product-price">$59.99</p>
+      <button class="add-to-cart-btn">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <img src="oke.jpg" alt="AuraTemp Elite" class="product-image" />
+    <div class="product-details">
+      <h2 class="product-title">AuraTemp Elite</h2>
+      <p class="product-price">$99.00</p>
+      <button class="add-to-cart-btn">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <img src="o.jpg" alt="NovaGlide Neo" class="product-image" />
+    <div class="product-details">
+      <h2 class="product-title">NovaGlide Neo</h2>
+      <p class="product-price">$14.50</p>
+      <button class="add-to-cart-btn">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <img src="e.jpg" alt="WaveFlex Mini" class="product-image" />
+    <div class="product-details">
+      <h2 class="product-title">WaveFlex Mini</h2>
+      <p class="product-price">$59.99</p>
+      <button class="add-to-cart-btn">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <img src="ww.jpg" alt="Aura Elite" class="product-image" />
+    <div class="product-details">
+      <h2 class="product-title">Aura Elite</h2>
+      <p class="product-price">$99.00</p>
+      <button class="add-to-cart-btn">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+ <!-- Footer -->
+<footer class="footer">
+  <div class="footer-container">
+    
+    <!-- Left Column -->
+    <div class="footer-left">
+      <div class="footer-logo">
+        <img src="watchify.jpg" alt="Whatchify Logo" />
+      </div>
+      <p class="footer-description">
+        Whatchify offers a curated range of stylish, smart, and affordable watches & gadgets to fit every lifestyle.
+      </p>
+    </div>
+
+    <!-- Center Column -->
+    <div class="footer-center">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="hotseller.html">Products</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Right Column -->
+    <div class="footer-right">
+      <h4>Contact Us</h4>
+      <ul>
+        <li>Email: contact@company.com</li>
+        <li>Phone: +1 (123) 456-7890</li>
+        <li>Address: 123 Business Street, City, Country</li>
+      </ul>
+
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+        <a href="https://facebook.com" target="_blank"><img src="face.jpg" alt="Facebook" /></a>
+        <a href="https://twitter.com" target="_blank"><img src="bird.jpg" alt="Twitter" /></a>
+        <a href="#" target="_blank"><img src="link.jpg" alt="LinkedIn" /></a>
+        <a href="https://instagram.com/watchy" target="_blank"><img src="inta.jpg" alt="Instagram" /></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom Line -->
+  <div class="footer-bottom">
+    <p>&copy; 2025 Whatchify. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="#privacy">Privacy Policy</a> |
+      <a href="#terms">Terms of Service</a>
+    </div>
+  </div>
+</footer>
+<script>
+  const toggleBtn = document.getElementById('menu-toggle');
+  const navLinks = document.getElementById('nav-links');
+
+  toggleBtn.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+  });
+</script>

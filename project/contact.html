@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Keywords Meta Tag -->
+  <meta name="keywords" content="watches, smartwatches, Whatchify, luxury watches, affordable watches, stylish watches, chronograph, VortexPulse GT, AstraNova, men's watches, women's watches">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us | Whatchify</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background: url('backgrown.jpg') no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    .header {
+      background-color: #24263f;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .header h1 {
+      font-size: 2.2em;
+      letter-spacing: 1px;
+      font-weight: 600;
+      text-transform: uppercase;
+      font-style: italic;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+   
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+    }
+
+    .form-container {
+      background-color: #25556caf;
+      padding: 40px;
+      max-width: 850px;
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 0 15px rgba(38, 112, 134, 0.75);
+      margin-bottom: 40px;
+    }
+
+    .form-container h2 {
+      text-align: center;
+      color: white;
+      margin-bottom: 20px;
+    }
+
+    label {
+      color: white;
+      font-size: 16px;
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+      border: 1px solid #ddd;
+      font-size: 14px;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    input[type="submit"] {
+      background-color: #0e3b52;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      width: 100%;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #154579;
+    }
+
+    .error {
+      color: rgb(255, 76, 76);
+      font-size: 14px;
+      text-align: center;
+    }
+
+    .location-container {
+      max-width: 850px;
+      width: 100%;
+      margin-bottom: 60px;
+    }
+
+    .location-container h2 {
+      text-align: center;
+      color: white;
+      margin-bottom: 20px;
+    }
+
+    .location-container iframe {
+      width: 100%;
+      height: 500px;
+      border: 0;
+      border-radius: 8px;
+    }
+
+    .footer {
+      background-color: #24263f;
+      color: #fff;
+      padding: 60px 20px;
+      font-size: 1rem;
+    }
+
+    .footer-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .footer-left,
+    .footer-center,
+    .footer-right {
+      flex: 1;
+      min-width: 250px;
+    }
+
+    .footer-logo img {
+      max-width: 150px;
+      margin-bottom: 15px;
+    }
+
+    .footer-description {
+      font-size: 1.1rem;
+      color: #ccc;
+    }
+
+    .footer-center h4,
+    .footer-right h4 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .footer-center ul,
+    .footer-right ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-center ul li,
+    .footer-right ul li {
+      margin: 8px 0;
+    }
+
+    .footer-center ul li a,
+    .footer-right ul li a {
+      color: #ccc;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .footer-center ul li a:hover,
+    .footer-right ul li a:hover {
+      color: #72a6c6;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 15px;
+      margin-top: 15px;
+    }
+
+    .social-icons a img {
+      width: 30px;
+      height: 30px;
+      transition: transform 0.3s ease;
+    }
+
+    .social-icons a:hover img {
+      transform: scale(1.1);
+    }
+
+    .footer-bottom {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 0.9rem;
+      color: #bbb;
+    }
+
+    .footer-links a {
+      color: #bbb;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    .footer-links a:hover {
+      color: #72a6c6;
+    }
+
+    @media (max-width: 768px) {
+      .nav {
+        flex-wrap: wrap;
+        gap: 15px;
+      }
+
+      .form-container,
+      .location-container {
+        padding: 20px;
+      }
+
+      .footer-container {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+    .nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: #4a6f8a;
+  padding: 14px 20px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  height: 40px;
+  width: 40px;
+  object-fit: contain;
+}
+
+.brand-name {
+  color: white;
+  font-weight: 700;
+  font-size: 1.2rem;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  color: white;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #d1e0ee;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding: 10px 0;
+  }
+}
+
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <div class="header">
+    <h1>Whatchify</h1>
+  </div>
+  <div class="nav">
+    <div class="nav-left">
+      <img src="watchify.jpg" alt="Whatchify Logo" class="logo" />
+      <span class="brand-name">Whatchify</span>
+    </div>
+    <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+    <div class="nav-links" id="nav-links">
+      <a href="home.html">Home</a>
+      <a href="hotseller.html">Our Products</a>
+      <a href="exlucive.html">Our Exclusive</a>
+      <a href="aboutus.html">About Us</a>
+      <a href="contact.html">Contact Us</a>
+    </div>
+  </div>
+  
+ 
+  <!-- Main Content -->
+  <main>
+    <div class="form-container">
+      <form id="myForm">
+        <h2>Contact Us</h2>
+
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phoneNumber">Phone Number:</label>
+        <input type="tel" id="phoneNumber" name="phoneNumber" required>
+
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" name="subject" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="6" required></textarea>
+
+        <input type="submit" value="Submit">
+        <p class="error" id="errorMessage"></p>
+      </form>
+    </div>
+
+    <div class="location-container">
+      <h2>Find Us At</h2>
+      <iframe src="https://www.google.com/maps/embed?pb=..." allowfullscreen loading="lazy"></iframe>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-left">
+        <div class="footer-logo">
+          <img src="watchify.jpg" alt="Company Logo" />
+        </div>
+        <p class="footer-description">
+          We are a leading company in the industry, committed to providing top-notch products and services to our customers.
+        </p>
+      </div>
+
+      <div class="footer-center">
+        <h4>Quick Links</h4> <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+
+        <h4>Contact Us</h4>
+        <ul>
+            <li>Email: contact@company.com</li>
+            <li>Phone: +1 (123) 456-7890</li>
+            <li>Address: 123 Business Street, City, Country</li>
+        </ul>
+        <h4>Follow Us</h4>
+        <div class="social-icons">
+            <a href="https://facebook.com" target="_blank"><img src="face.jpg" alt="Facebook" /></a>
+            <a href="https://twitter.com" target="_blank"><img src="bird.jpg" alt="Twitter" /></a>
+            <a href="" target="_blank"><img src="link.jpg" alt="LinkedIn" /></a>
+            <a href="@watchy" target="_blank"><img src="inta.jpg" alt="Instagram" /></a>
+        </div>
+    </div>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">
+            <script>
+              const toggleBtn = document.getElementById('menu-toggle');
+              const navLinks = document.getElementById('nav-links');
+            
+              toggleBtn.addEventListener('click', () => {
+                navLinks.classList.toggle('show');
+              });
+            </script>

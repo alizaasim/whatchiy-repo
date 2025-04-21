@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Keywords Meta Tag -->
+  <meta name="keywords" content="watches, Artistic Collection, Whatchify, luxury watches, affordable watches, stylish watches, chronograph, VortexPulse GT, AstraNova,Wonderland, women's watches,Childhood Fantasy,">
+
+  <title>Whatchify - Elegant & Modern Watches</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=Pacifico&display=swap" rel="stylesheet">
+  <style> 
+  .header {
+      background-color: #24263f;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .header h1 {
+      font-size: 2.2em;
+      letter-spacing: 1px;
+      font-weight: 600;
+      text-transform: uppercase;
+      font-style: italic;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+    .nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: #4a6f8a;
+  padding: 14px 20px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  height: 40px;
+  width: 40px;
+  object-fit: contain;
+}
+
+.brand-name {
+  color: white;
+  font-weight: 700;
+  font-size: 1.2rem;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  color: white;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #d1e0ee;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding: 10px 0;
+  }
+}
+
+
+    .product-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .product-card {
+      background-color: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      transition: transform 0.2s ease, box-shadow 0.3s ease;
+      width: 250px;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    }
+
+    .product-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .product-details {
+      padding: 15px 20px;
+      text-align: center;
+    }
+
+    .product-title {
+      font-size: 18px;
+      font-weight: 600;
+      margin: 10px 0 5px;
+      color: #333;
+    }
+
+    .product-price {
+      margin: 5px 0 10px;
+      color: #777;
+    }
+
+    .add-to-cart-btn {
+      background-color: #050f19;
+      color: white;
+      border: none;
+      padding: 10px;
+      width: 100%;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .add-to-cart-btn:hover {
+      background-color: #071a2e;
+    }
+
+    .artistic-title {
+      font-family: 'Georgia', serif;
+      color: #5c3d99;
+      font-size: 2.2rem;
+      letter-spacing: 1px;
+      text-align: center;
+      margin: 60px 0 30px;
+    }
+
+    .artistic-section {
+      background: linear-gradient(135deg, #f3edf9, #fdfdfd);
+      padding: 40px 20px;
+      border-radius: 12px;
+      box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.03);
+      margin-bottom: 60px;
+    }
+
+    .wonderland-title {
+      font-family: 'Cinzel Decorative', cursive;
+      color: #b95bb9;
+      font-size: 2.4rem;
+      text-align: center;
+      margin: 60px 0 30px;
+      letter-spacing: 1.5px;
+      text-shadow: 1px 2px 3px rgba(185, 91, 185, 0.2);
+    }
+
+    .wonderland-section {
+      background: linear-gradient(145deg, #fdf6ff, #f0f7ff);
+      padding: 50px 30px;
+      border-radius: 16px;
+      box-shadow: 0 0 40px rgba(185, 91, 185, 0.05);
+      margin-bottom: 80px;
+      animation: fadeInWonder 1s ease-in;
+    }
+
+    .wonderland-section .product-card {
+      box-shadow: 0 0 20px rgba(185, 91, 185, 0.1);
+    }
+
+    .wonderland-section .product-card:hover {
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 0 0 25px rgba(185, 91, 185, 0.3);
+    }
+
+    .childhood-title {
+      font-family: 'Pacifico', cursive;
+      color: #ff66b2;
+      font-size: 2.4rem;
+      text-align: center;
+      margin: 60px 0 30px;
+      letter-spacing: 1.5px;
+      text-shadow: 1px 2px 4px rgba(255, 102, 178, 0.3);
+    }
+
+    .childhood-section {
+      background: linear-gradient(135deg, #fff0f5, #fce4ec);
+      padding: 50px 30px;
+      border-radius: 16px;
+      box-shadow: 0 0 40px rgba(255, 102, 178, 0.08);
+      margin-bottom: 80px;
+      animation: fadeInWonder 1s ease-in;
+    }
+
+    .childhood-section .product-card {
+      box-shadow: 0 0 20px rgba(255, 102, 178, 0.1);
+    }
+
+    .childhood-section .product-card:hover {
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 0 0 25px rgba(255, 102, 178, 0.3);
+    }
+
+    @keyframes fadeInWonder {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      .product-card {
+        width: 45%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .product-card {
+        width: 100%;
+      }
+    }
+    .footer {
+  width: 100%;
+  background-color: #24263f;
+  color: #fff;
+  padding: 60px 20px 30px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 40px;
+}
+
+
+    .footer-left,
+    .footer-center,
+    .footer-right {
+      flex: 1;
+      min-width: 250px;
+    }
+
+    .footer-logo img {
+      max-width: 150px;
+      margin-bottom: 15px;
+    }
+
+    .footer-description {
+      font-size: 1.1rem;
+      color: #ccc;
+    }
+
+    .footer-center h4,
+    .footer-right h4 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .footer-center ul,
+    .footer-right ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-center ul li,
+    .footer-right ul li {
+      margin: 8px 0;
+    }
+
+    .footer-center ul li a,
+    .footer-right ul li a {
+      color: #ccc;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .footer-center ul li a:hover,
+    .footer-right ul li a:hover {
+      color: #72a6c6;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 15px;
+      margin-top: 15px;
+    }
+
+    .social-icons a img {
+      width: 30px;
+      height: 30px;
+      transition: transform 0.3s ease;
+    }
+
+    .social-icons a:hover img {
+      transform: scale(1.1);
+    }
+
+    .footer-bottom {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 0.9rem;
+      color: #bbb;
+    }
+
+    .footer-links a {
+      color: #bbb;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    .footer-links a:hover {
+      color: #72a6c6;
+    }
+
+    @media (max-width: 768px) {
+      .nav {
+        flex-wrap: wrap;
+        gap: 15px;
+      }
+
+      .form-container,
+      .location-container {
+        padding: 20px;
+      }
+
+      .footer-container {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+    @media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-left, .footer-center, .footer-right {
+    width: 100%;
+  }
+}
+  </style>
+</head>
+<body>
+  <div class="nav">
+    <div class="nav-left">
+      <img src="watchify.jpg" alt="Whatchify Logo" class="logo" />
+      <span class="brand-name">Whatchify</span>
+    </div>
+    <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+    <div class="nav-links" id="nav-links">
+      <a href="home.html">Home</a>
+      <a href="hotseller.html">Our Products</a>
+      <a href="exlucive.html">Our Exclusive</a>
+      <a href="aboutus.html">About Us</a>
+      <a href="contact.html">Contact Us</a>
+    </div>
+  </div>
+  <h1 class="artistic-title">Artistic Collection</h1>
+  <div class="product-container artistic-section">
+    <!-- 3 Artistic Items -->
+   
+   
+      <div class="product-card">
+        <img src="glo.jpg" alt="Glass Sculpture" class="product-image" />
+        <div class="product-details">
+          <h2 class="product-title">Glass Sculpture</h2>
+          <p class="product-price">$42.00</p>
+          <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+      </div>
+    
+      <div class="product-card">
+        <img src="hj.jpg" alt="Abstract Frame" class="product-image" />
+        <div class="product-details">
+          <h2 class="product-title">Abstract Frame</h2>
+          <p class="product-price">$58.00</p>
+          <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+      </div>
+    
+      <div class="product-card">
+        <img src="lom.jpg" alt="Canvas Print" class="product-image" />
+        <div class="product-details">
+          <h2 class="product-title">Canvas Print</h2>
+          <p class="product-price">$66.00</p>
+          <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+      </div>
+  </div>
+
+    <!-- ... your artistic product cards here ... --><body>
+    
+  <h1 class="wonderland-title">Wonderland</h1>
+  <div class="product-container wonderland-section">
+    <!-- 4 Wonderland Items -->
+    
+      <div class="product-card">
+        <img src="cards.jpg" alt="Queen of Cards Print" class="product-image" />
+        <div class="product-details">
+          <h2 class="product-title">Queen of Cards</h2>
+          <p class="product-price">$66.00</p>
+          <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+      </div>
+    
+      <div class="product-card">
+        <img src="alace.jpg" alt="Alice in Wonderland Art" class="product-image" />
+        <div class="product-details">
+          <h2 class="product-title">Alice in Wonderland</h2>
+          <p class="product-price">$66.00</p>
+          <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+      </div>
+    
+      <div class="product-card">
+        <img src="key.jpg" alt="Golden Key Artwork" class="product-image" />
+        <div class="product-details">
+          <h2 class="product-title">Golden Key</h2>
+          <p class="product-price">$66.00</p>
+          <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+      </div>
+    
+      <div class="product-card">
+        <img src="dink.jpg" alt="Drink Me Bottle Print" class="product-image" />
+        <div class="product-details">
+          <h2 class="product-title">Drink Me Bottle</h2>
+          <p class="product-price">$66.00</p>
+          <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+      </div>
+      
+
+  <h1 class="childhood-title">Childhood Fantasy</h1>
+  <div class="product-container childhood-section">
+    <!-- 4 Childhood Fantasy Items -->
+    <div class="product-card">
+        <img src="lol.jpg" alt="Laughing Bunny Clock" class="product-image" />
+        <div class="product-details">
+          <h2 class="product-title">Laughing Bunny Clock</h2>
+          <p class="product-price">$66.00</p>
+          <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+      </div>
+      
+      <div class="product-card">
+        <img src="lop.jpg" alt="Pastel Wonderland Canvas" class="product-image" />
+        <div class="product-details">
+          <h2 class="product-title">Pastel Wonderland Canvas</h2>
+          <p class="product-price">$66.00</p>
+          <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+      </div>
+      
+      <div class="product-card">
+        <img src="sw.jpg" alt="Sweet Magic Potion Frame" class="product-image" />
+        <div class="product-details">
+          <h2 class="product-title">Sweet Magic Potion Frame</h2>
+          <p class="product-price">$66.00</p>
+          <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+      </div>
+      
+      <div class="product-card">
+        <img src="ss.jpg" alt="Starry Sparkle Print" class="product-image" />
+        <div class="product-details">
+          <h2 class="product-title">Starry Sparkle Print</h2>
+          <p class="product-price">$66.00</p>
+          <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+      </div>
+      
+    <!-- ... your childhood fantasy product cards here ... -->
+  </div>
+ <!-- Footer -->
+<footer class="footer">
+    <div class="footer-container">
+      <!-- Left Column -->
+      <div class="footer-left">
+        <div class="footer-logo">
+          <img src="watchify.jpg" alt="Company Logo" />
+        </div>
+        <p class="footer-description">
+          We are a leading company in the industry, committed to providing top-notch products and services to our customers.
+        </p>
+      </div>
+  
+      <!-- Center Column -->
+      <div class="footer-center">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+  
+      <!-- Right Column -->
+      <div class="footer-right">
+        <h4>Contact Us</h4>
+        <ul>
+          <li>Email: contact@company.com</li>
+          <li>Phone: +1 (123) 456-7890</li>
+          <li>Address: 123 Business Street, City, Country</li>
+        </ul>
+        <h4>Follow Us</h4>
+        <div class="social-icons">
+          <a href="https://facebook.com" target="_blank"><img src="face.jpg" alt="Facebook" /></a>
+          <a href="https://twitter.com" target="_blank"><img src="bird.jpg" alt="Twitter" /></a>
+          <a href="#" target="_blank"><img src="link.jpg" alt="LinkedIn" /></a>
+          <a href="https://instagram.com/watchy" target="_blank"><img src="inta.jpg" alt="Instagram" /></a>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Bottom Line -->
+    <div class="footer-bottom">
+      <p>&copy; 2025 Whatchify. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="#privacy">Privacy Policy</a> |
+        <a href="#terms">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+  <script>
+    const toggleBtn = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+  
+    toggleBtn.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+  </script>

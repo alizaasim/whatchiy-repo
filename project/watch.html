@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Product Catalog</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f8f9fa;
+      margin: 0;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+      color: #333;
+    }
+
+    .product-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .product-card {
+      background-color: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      transition: transform 0.2s ease, box-shadow 0.3s ease;
+      width: 250px;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    }
+
+    .product-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .product-details {
+      padding: 15px 20px;
+      text-align: center;
+    }
+
+    .product-title {
+      font-size: 18px;
+      font-weight: 600;
+      margin: 10px 0 5px;
+      color: #333;
+    }
+
+    .product-price {
+      font-size: 16px;
+      color: #28a745;
+      margin-bottom: 15px;
+    }
+
+    .add-to-cart-btn {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 10px;
+      width: 100%;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .add-to-cart-btn:hover {
+      background-color: #0056b3;
+    }
+
+    /* Responsive Layout */
+    @media (max-width: 768px) {
+      .product-card {
+        width: 45%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .product-card {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Our Products</h1>
+
+  <div class="product-container">
+    <div class="product-card">
+      <img src="wow.jpg" alt="Product Image" class="product-image" />
+      <div class="product-details">
+        <h2 class="product-title">Awesome Product</h2>
+        <p class="product-price">$19.99</p>
+        <button class="add-to-cart-btn">Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img src="yes.jpg" alt="Product Image" class="product-image" />
+      <div class="product-details">
+        <h2 class="product-title">Cool Gadget</h2>
+        <p class="product-price">$24.99</p>
+        <button class="add-to-cart-btn">Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img src="oook.jpg" alt="Product Image" class="product-image" />
+      <div class="product-details">
+        <h2 class="product-title">Trendy Gear</h2>
+        <p class="product-price">$14.50</p>
+        <button class="add-to-cart-btn">Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img src="o.jpg" alt="Product Image" class="product-image" />
+      <div class="product-details">
+        <h2 class="product-title">Fashion Item</h2>
+        <p class="product-price">$29.99</p>
+        <button class="add-to-cart-btn">Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img src="okj.jpg" alt="Product Image" class="product-image" />
+      <div class="product-details">
+        <h2 class="product-title">Sleek Watch</h2>
+        <p class="product-price">$89.00</p>
+        <button class="add-to-cart-btn">Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img src="ok.jpg" alt="Product Image" class="product-image" />
+      <div class="product-details">
+        <h2 class="product-title">Wireless Earbuds</h2>
+        <p class="product-price">$59.99</p>
+        <button class="add-to-cart-btn">Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img src="mm.jpg" alt="Product Image" class="product-image" />
+      <div class="product-details">
+        <h2 class="product-title">Smart Home</h2>
+        <p class="product-price">$39.00</p>
+        <button class="add-to-cart-btn">Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img src="lo.jpg" alt="Product Image" class="product-image" />
+      <div class="product-details">
+        <h2 class="product-title">Eco Speaker</h2>
+        <p class="product-price">$44.00</p>
+        <button class="add-to-cart-btn">Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img src="u.jpg" alt="Product Image" class="product-image" />
+      <div class="product-details">
+        <h2 class="product-title">Modern Lamp</h2>
+        <p class="product-price">$33.00</p>
+        <button class="add-to-cart-btn">Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img src="oke.jpg" alt="Product Image" class="product-image" />
+      <div class="product-details">
+        <h2 class="product-title">Smart Thermostat</h2>
+        <p class="product-price">$99.00</p>
+        <button class="add-to-cart-btn">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

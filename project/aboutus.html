@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Keywords Meta Tag -->
+  <meta name="keywords" content="watches, smartwatches, Whatchify, luxury watches, affordable watches, stylish watches, chronograph, VortexPulse GT, AstraNova, men's watches, women's watches">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us | Whatchify</title>
+  <style>
+    /* Reset & Base Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      height: 100%;
+      overflow-x: hidden;
+      color: #fff;
+    }
+
+    /* Header */
+    .header {
+      background-color: #24263f;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .header h1 {
+      font-size: 2.2em;
+      letter-spacing: 1px;
+      font-weight: 600;
+      text-transform: uppercase;
+      font-style: italic;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+    /* Navigation Bar */
+    .nav {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      background-color: #4a6f8a;
+      padding: 14px 0;
+      box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: color 0.3s ease;
+    }
+
+    .nav a:hover {
+      color: #d1e0ee;
+    }
+
+    /* Background Video */
+    #bgVideo {
+      position: fixed;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+      z-index: -1;
+      opacity: 0.65;
+    }
+  
+    @media (max-width: 768px) {
+      .center-container {
+        padding: 30px 20px;
+      }
+
+      .nav {
+        flex-wrap: wrap;
+        gap: 15px;
+      }
+    }
+
+    /* About Us Section (Center Container) */
+    .center-container {
+      background-color: rgba(20, 36, 61, 0.88);
+      padding: 70px 60px; /* Increased padding */
+      border-radius: 12px;
+      max-width: 900px; /* Increased max width */
+      width: 95%;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+      margin: 80px auto; /* Increased margin */
+      flex: 1;
+    }
+
+    /* Background Video */
+    #bgVideo {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      z-index: -1;
+      opacity: 0.65;
+      filter: brightness(0.6) contrast(1.05);
+    }
+    .nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: #4a6f8a;
+  padding: 14px 20px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  height: 40px;
+  width: 40px;
+  object-fit: contain;
+}
+
+.brand-name {
+  color: white;
+  font-weight: 700;
+  font-size: 1.2rem;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  color: white;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #d1e0ee;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding: 10px 0;
+  }
+}
+
+    /* Footer Styles Removed */
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <div class="header">
+    <h1>Whatchify</h1>
+  </div>
+
+ <!-- Navigation -->
+<div class="nav">
+  <div class="nav-left">
+    <img src="watchify.jpg" alt="Whatchify Logo" class="logo" />
+    <span class="brand-name">Whatchify</span>
+  </div>
+  <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+  <div class="nav-links" id="nav-links">
+    <a href="home.html">Home</a>
+    <a href="hotseller.html">Our Products</a>
+    <a href="exlucive.html">Our Exclusive</a>
+    <a href="aboutus.html">About Us</a>
+    <a href="contact.html">Contact Us</a>
+  </div>
+</div>
+
+
+
+  <!-- Background Video -->
+  <video autoplay muted loop id="bgVideo">
+    <source src="istockphoto-1499733452-640_adpp_is.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- About Us Section -->
+  <div class="center-container">
+    <section id="ABOUT" class="about-section">
+      <h2>About Us</h2>
+      <p>
+        At <strong>Whatchify</strong>, we are redefining the way you engage with luxury watches and digital advertising. Our platform offers a unique opportunity for watch enthusiasts to earn rewards simply by watching advertisements and interacting with curated content from the world of horology.
+      </p>
+      <p>
+        Powered by the BNB BEP20 blockchain, Whatchify ensures transparency, security, and trust in every interaction. Our ecosystem bridges the gap between advertisers, brands, and consumers, creating value for everyone involved.
+      </p>
+      <p>
+        By completing watch-related tasks, participating in challenges, and staying updated on the latest trends, users can earn tokens that are redeemable within our marketplace—unlocking access to premium timepieces and exclusive deals.
+      </p>
+      <p>
+        Whether you're a lifelong collector or just discovering your passion for watches, Whatchify gives you a rewarding experience where engagement meets elegance. Join us and be part of the future of luxury watch discovery.
+      </p>
+    </section>
+    <script>
+      const toggleBtn = document.getElementById('menu-toggle');
+      const navLinks = document.getElementById('nav-links');
+    
+      toggleBtn.addEventListener('click', () => {
+        navLinks.classList.toggle('show');
+      });
+    </script>
+    
+  </div>
+  

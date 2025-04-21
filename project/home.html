@@ -1,0 +1,1219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Keywords Meta Tag -->
+    <meta name="keywords" content="watches, smartwatches, Whatchify, luxury watches, affordable watches, stylish watches, chronograph, VortexPulse GT, AstraNova, men's watches, women's watches">
+  <title>Whatchify - Elegant & Modern Watches</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+    <style>
+       
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .header {
+      background-color: #24263f;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .header h1 {
+      font-size: 2.2em;
+      letter-spacing: 1px;
+      font-weight: 600;
+      text-transform: uppercase;
+      font-style: italic;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+
+        .nav {
+            display: flex;
+            justify-content: center;
+            background-color: #4a6f8a;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav a {
+            color: white;
+            padding: 16px 24px;
+            text-decoration: none;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .nav a:hover {
+            background-color: #152c3a;
+        }
+
+        .slider {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            height: 100vh;
+        }
+
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slides img {
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+        }
+
+        /* Container for text in the slider */
+        .slide-text {
+            position: absolute;
+            bottom: 20%;
+            left: 5%;
+            color: white;
+            font-size: 2em;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+        }
+
+        .slide-text p {
+            margin: 0;
+        }
+
+        .navigation {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+
+        .navigation button {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            border: none;
+            padding: 15px;
+            cursor: pointer;
+            font-size: 2em;
+            transition: background-color 0.3s ease;
+        }
+
+        .navigation button:hover {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        /* Container Styling Beneath the Slider */
+        .content-container {
+            padding: 40px;
+            background-color: #ffffff;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center; /* Centers the content horizontally */
+            align-items: center; /* Centers the content vertically */
+        }
+
+        .content-container h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .content-container p {
+            font-size: 1.2em;
+            color: #193042;
+        }
+        /* Main content container using Flexbox */
+        .content-container {
+            padding: 60px 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-top: -20px;
+            display: flex;
+            flex-direction: column;  /* Arrange content in column direction */
+            align-items: center;  /* Center the content horizontally */
+            justify-content: center; /* Center content vertically */
+            text-align: center;
+        }
+
+        .content-container h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #34495e;
+            width: 100%; /* Ensures that the title spans the full width */
+            text-align: center;
+        }
+
+        .content-container p {
+            font-size: 1.2em;
+            color: #000001;
+            max-width: 800px;
+            margin: 0 auto 30px auto;
+            text-align: center;
+        }
+
+        /* Flexbox container for the images and descriptions */
+        .content-images {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center; /* Center the images horizontally */
+            align-items: flex-start; /* Align the images at the top */
+            gap: 30px; /* Space between items */
+        }
+
+        /* Styling for each image */
+        .bottom-img {
+            width: 300px;
+            height: 300px;
+            margin: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(173, 249, 237, 0.606);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            object-fit: cover;
+        }
+
+        /* Hover effect on images */
+        .bottom-img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Styling for text under images */
+        .content-images .image-item {
+            text-align: center;
+            width: 300px;
+        }
+
+        /* New container below the new arrivals section */
+        .additional-container {
+            background-color: #f4f4f4;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .additional-container h3 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #1e2a47;
+        }
+
+        .additional-container p {
+            font-size: 1.2em;
+            color: #000000;
+            margin-bottom: 20px;
+            max-width: 800px;
+        }
+
+        /* New section with images */
+        .additional-images {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .additional-images img {
+            width: 250px;
+            height: 250px;
+            border-radius: 8px;
+            object-fit: cover;
+            box-shadow: 0 4px 8px rgba(143, 167, 200, 0.1);
+        }
+
+        /* Styling for the video section */
+        .video-container {
+            width: 100%;
+            background-color: #ffffff;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .video-container h3 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #34495e;
+        }
+
+        .video-container video {
+            width: 100%;
+            max-width: 1000px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .video-container {
+  max-width: 800px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+.video-container video {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .content-container h2 {
+                font-size: 2em;
+            }
+
+            .content-container p {
+                font-size: 1em;
+            }
+
+            .bottom-img {
+                width: 250px;
+                height: 250px;
+            }
+
+            .content-images {
+                gap: 20px; /* Smaller gap for mobile */
+            }
+
+            .content-container {
+                padding: 30px 20px; /* Reduce padding on smaller screens */
+            }
+
+            .additional-container h3 {
+                font-size: 2em;
+            }
+
+            .additional-container p {
+                font-size: 1em;
+            }
+
+            .additional-images img {
+                width: 200px;
+                height: 200px;
+            }
+
+            .video-container h3 {
+                font-size: 2em;
+            }
+        }.additional-container {
+    background-color: #f4f4f4;
+    padding: 60px 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(169, 227, 231, 0.565);
+}
+
+.additional-container h3 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #16475ec3;
+}
+
+.additional-container p {
+    font-size: 1.2em;
+    color: #ffffff;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.additional-images {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Grid with 4 columns */
+    gap: 20px;
+    justify-items: center;
+}
+
+.image-item {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 280px; /* Control image size */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-item img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.image-item:hover img {
+    transform: scale(1.05); /* Zoom effect on hover */
+}
+
+.caption {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.5);
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .additional-images {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+    }
+
+    .image-item {
+        max-width: 100%; /* Full width for smaller screens */
+    }
+}
+
+        /* Styling for the New Collection Section */
+.new-collection-container {
+    background-color: #f9f9f9;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.new-collection-container h3 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #030b1d;
+}
+
+.new-collection-container p {
+    font-size: 1.2em;
+    color: #6c819312;
+    max-width: 800px;
+    margin: 0 auto 30px auto;
+}
+
+.new-collection-images {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.new-collection-images .image-item {
+    text-align: center;
+    width: 300px;
+}
+
+.new-collection-images img {
+    width: 100%;
+    height: 300px;
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(153, 207, 228, 0.712);
+}
+
+.new-collection-images .image-item p {
+    margin-top: 10px;
+    font-size: 1.2em;
+    color: #34495e;
+}
+/* Watch of Choice Section Styling */
+.watch-of-choice-container {
+    background-color: #fff;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+}
+
+.watch-of-choice-container h3 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #1e2a47;
+}
+
+.watch-of-choice-container p {
+    font-size: 1.2em;
+    color: #0d3a40;
+    margin-bottom: 30px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.watch-of-choice-images {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.watch-of-choice-images .watch-item {
+    text-align: center;
+    width: 300px;
+}
+
+.watch-of-choice-images img {
+    width: 100%;
+    height: 300px;
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.watch-of-choice-images .watch-item p {
+    margin-top: 10px;
+    font-size: 1.2em;
+    color: #34495e;
+}
+
+.view-details-btn {
+    background-color: #1e2a47;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.view-details-btn:hover {
+    background-color: #0c314c;
+}
+/* Watch of Choice Section Styling */
+.watch-of-choice-container {
+    background-color: #ffffff;
+    padding: 60px 20px;
+    text-align: center;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+}
+
+.watch-of-choice-container h3 {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #1e2a47;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.watch-of-choice-container p {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+    font-style: italic;
+}
+
+.watch-of-choice-images {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.watch-of-choice-images .watch-item {
+    text-align: center;
+    width: 280px;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.watch-of-choice-images .watch-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.watch-of-choice-images img {
+    width: 100%;
+    height: 280px;
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease-in-out;
+}
+
+.watch-of-choice-images img:hover {
+    transform: scale(1.05);
+}
+
+.watch-of-choice-images .watch-item p {
+    margin-top: 15px;
+    font-size: 1.2em;
+    color: #34495e;
+    font-weight: 600;
+}
+
+.view-details-btn {
+    background-color: #1e2a47;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1em;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 180px;
+    margin-left: auto;
+    margin-right: auto;
+    letter-spacing: 1px;
+}
+
+.view-details-btn:hover {
+    background-color: #144c7482;
+    transform: scale(1.05);
+}
+
+/* Footer Styling */
+.footer {
+    background-color: #24263f;
+    color: #fff;
+    padding: 60px 0;
+    font-size: 1rem;
+    text-align: left;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-left, .footer-center, .footer-right {
+    flex: 1;
+    min-width: 250px;
+    margin-bottom: 20px;
+}
+
+.footer-logo img {
+    max-width: 150px;
+    margin-bottom: 15px;
+}
+
+.footer-description {
+    font-size: 1.1rem;
+    color: #ccc;
+}
+
+.footer-center h4, .footer-right h4 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.footer-center ul, .footer-right ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-center ul li, .footer-right ul li {
+    margin: 8px 0;
+}
+
+.footer-center ul li a, .footer-right ul li a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-center ul li a:hover, .footer-right ul li a:hover {
+    color: #72a6c6;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.social-icons a img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+}
+
+.social-icons a:hover img {
+    transform: scale(1.1);
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 0.9rem;
+    color: #bbb;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+.footer-links a {
+    color: #bbb;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer-links a:hover {
+    color: #72a6c6;
+}
+
+ 
+
+  .watch-of-choice-container {
+    text-align: center;
+    margin-top: 50px;
+    padding: 40px;
+    background-color: #f0f4f8;
+    border-radius: 16px;
+    box-shadow: 0 0 20px rgba(0, 123, 255, 0.05);
+  }
+
+  .watch-of-choice-images {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 30px;
+  }
+
+  .watch-item {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    width: 220px;
+    transition: transform 0.3s ease;
+  }
+
+  .watch-item:hover {
+    transform: translateY(-5px);
+  }
+
+  .watch-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+  .view-details-btn {
+    margin-top: 10px;
+    padding: 8px 12px;
+    background-color: #09131e;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .view-details-btn:hover {
+    background-color: #071320;
+  }
+  .dropdown-content {
+  display: none;
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #f1f1f1;
+  border: 1px solid #ccc;
+  width: 250px;
+  border-radius: 5px;
+}
+.dropdown-content {
+  display: none;
+  background-color: #f9f9f9;
+  padding: 15px;
+  margin-top: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: #4a6f8a;
+  padding: 14px 20px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  height: 40px;
+  width: 40px;
+  object-fit: contain;
+}
+
+.brand-name {
+  color: white;
+  font-weight: 700;
+  font-size: 1.2rem;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  color: white;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #d1e0ee;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding: 10px 0;
+  }
+}
+
+
+
+
+</style>
+
+
+    </style>
+<body>
+    <div class="header">
+        <h1> whatchify </h1>
+    </div>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <title>Responsive Navbar</title>
+      <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+    
+        <div class="nav">
+            <div class="nav-left">
+              <img src="watchify.jpg" alt="Whatchify Logo" class="logo" />
+              <span class="brand-name">Whatchify</span>
+            </div>
+            <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+            <div class="nav-links" id="nav-links">
+              <a href="home.html">Home</a>
+              <a href="hotseller.html">Our Products</a>
+              <a href="exlucive.html">Our Exclusive</a>
+              <a href="aboutus.html">About Us</a>
+              <a href="contact.html">Contact Us</a>
+            </div>
+          </div>   
+          
+    
+    <div class="slider">
+        <div class="slides">
+            <div class="slide">
+                <img src="pexels-photo-11780447.jpeg" alt="Image 1">
+                <div class="slide-text">
+                    
+                    <p>Discover Our Unique Collection</p>
+                    <p>Luxury Watches</p>                                                                                                                                                                                                             
+                </div>
+            </div>
+            <div class="slide">
+                <img src="do.jpeg" alt="Image 3">
+                <div class="slide-text">
+                    
+                    <p></p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="okhg.webp" alt="Image 5">
+                <div class="slide-text">
+                    <p></p>
+                   
+                </div>
+            </div>
+            <div class="slide">
+                <img src="okh.webp" alt="Image 4">
+                <div class="slide-text">
+                    <p></p>
+                   
+                </div>
+            </div>
+            <div class="slide">
+                <img src="img6.jpg" alt="Image 6">
+                <div class="slide-text">
+                    <p></p>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="navigation">
+            <button onclick="prevSlide()">&#10094;</button>
+            <button onclick="nextSlide()">&#10095;</button>
+        </div>
+    </div>
+    
+    <!-- Container Beneath the Slider -->
+    
+    <div class="content-container">
+        <h2>Discover More of Our New Arrivals</h2>
+        <p>Explore our exclusive range of engagement rings, luxury watches, and designer jewelry. We also offer flexible lease-to-own options for your convenience. Visit our catalog or contact us for more details.</p>
+    
+        <div class="content-images">
+            <div class="image-item">
+                <img src="img9.jpg" alt="Classic Lime" class="bottom-img">
+                <p>Classic Lime</p>
+            </div>
+            <div class="image-item">
+                <img src="img10.jpg" alt="Pearl Pink" class="bottom-img">
+                <p>Pearl Pink</p>
+            </div>
+            <div class="image-item">
+                <img src="img11.jpg" alt="Classic" class="bottom-img">
+                <p>Classic</p>
+            </div>
+        </div>
+    </div>
+
+    <body>
+        <div class="additional-container">
+            <h3>Explore Our Additional Collections</h3>
+            <p>Browse through our diverse range of stunning collections, from vintage pieces to modern elegance, crafted to suit all tastes and styles.</p>
+            <div class="additional-images">
+                <div class="image-item">
+                    <img src="img12.jpg" alt="Collection 1">
+                    <div class="caption">
+                        <p>Vintage Elegance</p>
+                    </div>
+                </div>
+                <div class="image-item">
+                    <img src="img13.jpg" alt="Collection 2">
+                    <div class="caption">
+                        <p>Modern Charm</p>
+                    </div>
+                </div>
+                <div class="image-item">
+                    <img src="img14.jpg" alt="Collection 3">
+                    <div class="caption">
+                        <p>Classic Beauty</p>
+                    </div>
+                </div>
+                <div class="image-item">
+                    <img src="img15.jpg" alt="Collection 4">
+                    <div class="caption">
+                        <p>Luxury Redefined</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </body>
+    </html><!-- Enhanced Additional Collections Section -->
+    </div>
+<!-- New Collection Section Below -->
+<div class="new-collection-container">
+    <h3>popular </h3>
+    <p>Discover the latest additions to our exclusive collection of fine jewelry. From contemporary designs to timeless classics, our new collection offers something for everyone.</p>
+    <div class="new-collection-images">
+        <div class="image-item">
+            <img src="img16.jpg" alt="New Collection 1" class="bottom-img">
+            <p>Elegant Silver</p>
+        </div>
+        <div class="image-item">
+            <img src="img17.jpg" alt="New Collection 2" class="bottom-img">
+            <p>Golden Touch</p>
+        </div>
+        <div class="image-item">
+            <img src="img18.jpg" alt="New Collection 3" class="bottom-img">
+
+            <p>Royal Sapphire</p>
+        </div>
+        <div class="image-item">
+            <img src="img19.jpg" alt="New Collection 3" class="bottom-img">
+
+            <p>purple Perfection</p>
+        </div>
+        
+        <div class="image-item">
+            <img src="img20.jpg" alt="New Collection 3" class="bottom-img">
+
+            <p>black magic</p>
+        </div>
+        <div class="image-item">
+            <img src="img21.jpg" alt="New Collection 3" class="bottom-img">
+
+            <p>sea shore</p>
+        </div>
+        
+    </div>
+</div>
+
+<div class="video-container">
+    <h3>Watch Our Latest Video</h3>
+    <video autoplay muted loop playsinline controls width="100%" style="max-width: 800px;">
+      <source src="video.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+  
+ 
+<!-- Watch of Choice Section Below -->
+<div class="watch-of-choice-container">
+    <h3>Watch of Choice</h3>
+    <p>Explore our exclusive Watch of Choice collection, blending timeless elegance with precision engineering.</p>
+  
+  
+    <div class="watch-of-choice-images">
+        <div class="watch-item" data-category="elegance">
+          <img src="imf22.jpg" alt="Watch of Choice 1" class="watch-img">
+          <p>Elegance Series</p>
+          <button class="view-details-btn" onclick="toggleDropdown(this)">View Details</button>
+          <div class="dropdown-content">
+            <p><strong>Product:</strong> Widget A</p>
+            <p><strong>Price:</strong> $25.00</p>
+            <p><strong>Description:</strong> High-quality, durable, and affordable.</p>
+          </div>
+        </div>
+      
+        <div class="watch-item" data-category="chronograph">
+          <img src="img23.jpg" alt="Watch of Choice 2" class="watch-img">
+          <p>Royal Chronograph</p>
+          <button class="view-details-btn" onclick="toggleDropdown(this)">View Details</button>
+          <div class="dropdown-content">
+            <p><strong>Product:</strong> Widget B</p>
+            <p><strong>Price:</strong> $35.00</p>
+            <p><strong>Description:</strong> Sleek, stylish, and water-resistant.</p>
+          </div>
+        </div>
+      
+        <div class="watch-item" data-category="luxury">
+          <img src="img22.jpg" alt="Watch of Choice 3" class="watch-img">
+          <p>Luxury Classic</p>
+          <button class="view-details-btn" onclick="toggleDropdown(this)">View Details</button>
+          <div class="dropdown-content">
+            <p><strong>Product:</strong> Widget C</p>
+            <p><strong>Price:</strong> $55.00</p>
+            <p><strong>Description:</strong> Premium quality with a timeless design.</p>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+
+
+    </div>
+</div>
+
+        </div>
+    </div>
+</div>
+<!-- Footer Section -->
+<footer class="footer">
+    <div class="footer-container">
+        <!-- Footer Left: Logo and Description -->
+        <div class="footer-left">
+            <div class="footer-logo">
+                <img src="watchify.jpg" alt="Company Logo" />
+            </div>
+            <p class="footer-description">
+                We are a leading company in the industry, committed to providing top-notch products and services to our customers.
+            </p>
+        </div>
+
+        <!-- Footer Center: Quick Links -->
+        <div class="footer-center">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- Footer Right: Contact and Social Media -->
+        <div class="footer-right">
+            <h4>Contact Us</h4>
+            <ul>
+                <li>Email: contact@company.com</li>
+                <li>Phone: +1 (123) 456-7890</li>
+                <li>Address: 123 Business Street, City, Country</li>
+            </ul>
+            <h4>Follow Us</h4>
+            <div class="social-icons">
+                <a href="https://facebook.com" target="_blank"><img src="face.jpg" alt="Facebook" /></a>
+                <a href="https://twitter.com" target="_blank"><img src="bird.jpg" alt="Twitter" /></a>
+                <a href="" target="_blank"><img src="link.jpg" alt="LinkedIn" /></a>
+                <a href="@watchy" target="_blank"><img src="inta.jpg" alt="Instagram" /></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Bottom: Copyright and Privacy Links -->
+    <div class="footer-bottom">
+        <p>&copy; 2025 Company Name. All Rights Reserved.</p>
+        <div class="footer-links">
+            <a href="#privacy-policy">Privacy Policy</a> | <a href="#terms-of-service">Terms of Service</a>
+        </div>
+    </div>
+</footer>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+        let currentIndex = 0;
+
+        function showSlide(index) {
+            const slides = document.querySelector('.slides');
+            const totalSlides = slides.children.length;
+            currentIndex = (index + totalSlides) % totalSlides; // Ensure the index wraps around
+            slides.style.transform = `translateX(-${currentIndex * 100}vw)`; // Adjust the transform to slide by full viewport width
+        }
+
+        function nextSlide() {
+            showSlide(currentIndex + 1);
+        }
+
+        function prevSlide() {
+            showSlide(currentIndex - 1);
+        }
+
+        // Enable keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight') {
+                nextSlide();
+            } else if (e.key === 'ArrowLeft') {
+                prevSlide();
+            }
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+            $("a").on("click", function(event) {
+                if (this.hash !== "") {
+                    event.preventDefault();
+    
+                    var hash = this.hash;
+    
+                    $("html, body").animate(
+                        {
+                            scrollTop: $(hash).offset().top
+                        },
+                        800
+                    );
+                }
+            });
+        });
+    </script>
+    <script>
+        function filterWatches() {
+          const category = document.getElementById("watch-category").value;
+          const items = document.querySelectorAll(".watch-item");
+      
+          items.forEach(item => {
+            const itemCategory = item.getAttribute("data-category");
+      
+            if (category === "all" || itemCategory === category) {
+              item.style.display = "block";
+            } else {
+              item.style.display = "none";
+            }
+          });
+        }
+        
+  function toggleDropdown(button) {
+    const dropdown = button.nextElementSibling;
+    
+    // Hide all dropdowns except the one clicked
+    document.querySelectorAll('.dropdown-content').forEach(content => {
+      if (content !== dropdown) {
+        content.style.display = 'none';
+      }
+    });
+
+    // Toggle visibility of clicked one
+    // dropdown.style.display = (dropdown.style.display === 'block') ? 'none' : 'block';
+  }
+ 
+  
+    const toggleBtn = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+  
+    toggleBtn.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+  </script>
+
+
+      </script>
+    
+      
+</body>
+</html>
